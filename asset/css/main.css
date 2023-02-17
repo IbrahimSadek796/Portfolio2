@@ -1,0 +1,356 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+:root {
+    --transition: .6s;
+    --main-color:#0078ff;
+}
+a{
+    text-decoration: none;
+}
+
+
+
+
+
+/* .....................navbar..................... */
+/*  */
+.navbar{
+    position: fixed;
+    z-index: 99;
+    background-color: #000 !important;
+}
+.navbar .navbar-brand,
+.nav-item,
+.nav-link{
+    color: #fff !important;
+    font-weight: bold;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item .active{
+    position: relative;
+    transition: var(--transition);
+}
+.navbar .container-fluid .navbar-nav .nav-item .active::after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 70%;
+    left: 10%;
+    top: 90%;
+}
+
+.navbar .container-fluid .navbar-nav .nav-item .nav-add{
+    position: relative;
+    overflow: hidden;
+   
+}
+.navbar .container-fluid .navbar-nav .nav-item .nav-link:hover.nav-add::after{
+    left: 10%;
+    transition: var(--transition);
+}
+.navbar .container-fluid .navbar-nav .nav-item .nav-add::after{
+    content: "";
+    position: absolute;
+    background-color: #fff;
+    height: 2px;
+    width: 70%;
+    left: -80%;
+    top: 90%;
+}
+.dropdown-item:hover{
+    background-color: var(--main-color);
+    color: #0000007a;
+}
+
+/* .................Home.............. */
+.home{
+    background-image: url(../image/hero-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100%;
+    background-attachment: fixed;
+}
+
+.home .overlay{
+    background-color: rgba(0, 0, 0, .6);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .overlay .contain{
+    text-align: center;
+    color: #fff;
+    margin: auto;
+    width: 50%;
+}
+.home .overlay .contain p::after{
+
+    content: "D|";
+    /* font-weight: bold; */
+    font-size: 1.5rem;
+    animation-name: anim;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes anim{
+    0%{content: "D|";}
+    4%{content: "De|";}
+    8%{content: "Des|";}
+    12%{content: "Desi|";}
+    16%{content: "Desig|";}
+    20%{content: "Design|";}
+    24%{content: "Designe|";}
+    28%{content: "Designer|";}
+    32%{content: "Designer|";}
+    36%{content: "Designer|";}
+    40%{content: "Designe|";}
+    44%{content: "Design|";}
+    48%{content: "Desig|";}
+    52%{content: "Desi|";}
+    56%{content: "Des|";}
+    60%{content: "De|";}
+    64%{content: "D|";}
+    68%{content: "De|";}
+    72%{content: "Dev|";}
+    76%{content: "Deve|";}
+    80%{content: "Devel|";}
+    84%{content: "Develo|";}
+    88%{content: "Develop|";}
+    92%{content: "Develope|";}
+    96%{content: "Developer|";}
+    100%{content: "Developer|";}
+}
+
+/* ..............About.............. */
+.about  .row .col-md-6 .title{
+    position: relative;
+}
+.about  .row .col-md-6 .title::after{
+    content: "";
+    height: 2px;
+    width: 20%;
+    position: absolute;
+    left: 0%;
+    top: 100%;
+    background-color: var(--main-color);
+}
+/* .............Service................ */
+.line{
+    width: 7%;
+    height: .3rem;
+    background-color: var(--main-color);
+    margin: 0 auto;
+}
+
+.service .row .icon{
+    width: 2rem;
+    height: 2rem;
+    border: solid 10px var(--main-color);
+    border-radius: 50%;
+}
+
+.service .service-container{
+    cursor: pointer;
+
+}
+
+.service .service-container:hover .icon{
+    color: #fff;
+    background-color: var(--main-color);
+    border:solid 10px #6ab2fe;
+}
+
+/* ........Experience.......... */
+.experience{
+    background-image: url(../image/counters-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    position: relative;
+}
+.experience .lay{
+    position: absolute;
+    background-color: var(--main-color);
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: .6;
+}
+.experience .container{
+    padding: 8rem 0;
+}
+.experience .container .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+.experience .container .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 7rem;
+    height: 7rem;
+    border: solid .6rem #fff;
+    border-radius: 50%;
+}
+/* .........Portfolio.......... */
+.portfolio .container .portfolio-post .img{
+    overflow: hidden;
+}
+.portfolio .container .portfolio-post:hover img{
+    cursor: pointer;
+    transition: var(--transition);
+    transform: scale(1.2);
+}
+.portfolio .container .portfolio-post .icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1rem;
+    height: 1rem;
+    border: solid var(--main-color) .3rem;
+    border-radius: 50%;
+}
+/* ..............overlay............. */
+.feedback{
+    background-image: url(../image/overlay-bg.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+}
+.feedback .overlay{
+    position: absolute;
+    background-color: var(--main-color);
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    opacity: .6;
+}
+.feedback .container{
+    flex-flow: column;
+}
+.feedback .container .carousel-indicators button{
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+/* ............Blog.............. */
+.blog .container .post-information{
+    height: 350px;
+}
+.blog .container .blog-post .post-title{
+    position: absolute;
+    width: auto;
+    bottom: -13%;
+    left: 50%;
+    text-align: center;
+    padding: auto;
+    margin: auto;
+    transform: translate(-50%,1%);
+    
+}
+
+/* ...........Content........... */
+.contact{
+    background-image: url(../image/overlay-bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.contact .overlay{
+    background-color: var(--main-color);
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    opacity: .6;
+}
+
+.contact .container .title h2::after{
+    content: "";
+    position: absolute;
+    background-color: var(--main-color);
+    width: 10%;
+    height: 2px;
+    left: 0%;
+    top: 100%;
+}
+
+.contact .icon{
+    border: solid .2px var(--main-color);
+    border-radius: 50%;
+    width: 4rem;
+    height: 4rem;
+    font-size: 1.5rem;
+    transition: var(--transition);
+}
+.contact .icon:hover{
+    background-color: var(--main-color);
+    color: #fff;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: 0 0 0 8PX #5179a8;
+}
+
+/* .........To--Up......... */
+.to-up{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    right: 2rem;
+    bottom: 2rem;
+   position: fixed;
+   z-index: 50;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   color: #fff;
+   background-color: var(--main-color);
+   cursor: pointer;
+}
+.to-up:hover{
+    box-shadow: 0 0 0 7px #5179a8;
+    transition: var(--transition);
+}
+
+
+/* ......................Media Query..................... */
+@media screen and (max-width : 500px) {
+    .contact .icon{
+        width: 2rem;
+        height: 2rem;
+        border-radius: 50%;
+        border: solid .3rem var(--main-color);
+        background-color: var(--main-color);
+        color: #fff;
+        box-shadow: 0 0 0 8px #5179a8;
+        margin: 5rem 1rem;
+        padding: 2px;
+    }
+    .footer{
+        font-size: .8rem;
+    }
+    .contact{
+        font-size: .8rem;
+    }
+}
